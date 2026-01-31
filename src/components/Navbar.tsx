@@ -5,7 +5,7 @@ import {
 } from "framer-motion";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import logoImg from "../assets/logo.png";
+import logoImg from "../assets/Gemini_Generated_Image_cw6cgwcw6cgwcw6c.png";
 
 export default function Navbar() {
   const { scrollY } = useScroll();
