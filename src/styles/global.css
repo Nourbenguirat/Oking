@@ -650,7 +650,7 @@ footer p {
 
 .contact-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(6, 1fr);
     gap: 15px;
     margin-bottom: 60px;
 }
@@ -758,6 +758,7 @@ footer p {
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    max-width: 306px;
 }
 
 .faq-image img {
@@ -776,7 +777,7 @@ footer p {
 
 /* FAQ Container Section */
 .faq-container {
-    padding: 80px 0;
+    padding: 40px 0;
     background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
 }
 

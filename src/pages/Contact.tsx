@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Phone, Mail, MapPin, Instagram } from "lucide-react";
+import { Phone, Mail, MapPin, Instagram, Linkedin, Facebook } from "lucide-react";
 import "../styles/contact.css";
 
 const ContactInfo = [
@@ -16,16 +16,28 @@ const ContactInfo = [
     link: "mailto:kingdomcleen@gmail.com",
   },
   {
-    icon: MapPin,
-    label: "Adresse",
-    value: "1338 Wellington St. W, Ottawa, ON K1Y 3B7",
-    link: "https://maps.google.com/?q=1338+Wellington+St+W+Ottawa+ON+K1Y+3B7",
+    icon: Facebook,
+    label: "Facebook",
+    value: "Suivez-nous",
+    link: "https://facebook.com/kingdomcleen",
   },
   {
     icon: Instagram,
     label: "Instagram",
     value: "@kingdomcleen",
     link: "https://www.instagram.com/kingdomcleen?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+  },
+  {
+    icon: Linkedin,
+    label: "LinkedIn",
+    value: "KingdomCleen",
+    link: "https://www.linkedin.com/in/kingdom-cleen-907b213a9/",
+  },
+  {
+    icon: MapPin,
+    label: "Adresse",
+    value: "1338 Wellington St. W, Ottawa, ON K1Y 3B7",
+    link: "https://maps.google.com/?q=1338+Wellington+St+W+Ottawa+ON+K1Y+3B7",
   },
 ];
 
@@ -42,7 +54,6 @@ export default function Contact() {
         transition={{ duration: 0.6 }}
       >
         <h1>Contact Us</h1>
-        <p>We're here to help. Get in touch with us today!</p>
       </motion.section>
 
       {/* Contact Information */}
@@ -56,8 +67,8 @@ export default function Contact() {
                 <motion.a
                   key={index}
                   href={info.link}
-                  target={info.icon === MapPin || info.icon === Instagram ? "_blank" : "_self"}
-                  rel={info.icon === MapPin || info.icon === Instagram ? "noopener noreferrer" : ""}
+                  target={info.icon === MapPin || info.icon === Instagram || info.icon === Facebook || info.icon === Linkedin ? "_blank" : "_self"}
+                  rel={info.icon === MapPin || info.icon === Instagram || info.icon === Facebook || info.icon === Linkedin ? "noopener noreferrer" : ""}
                   className="contact-card"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}

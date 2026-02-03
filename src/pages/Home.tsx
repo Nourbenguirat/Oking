@@ -1,14 +1,13 @@
 import { motion } from "framer-motion";
-import { Phone, Mail, Facebook, Instagram, MapPin, ArrowUp } from "lucide-react";
+import { Phone, Mail, Facebook, Instagram, MapPin, ArrowUp, Linkedin } from "lucide-react";
 import { useState, useEffect } from "react";
-import homeCleaningImg from "../assets/home-cleaning.jpeg";
 import officeCleaningImg from "../assets/office-cleaning.jpg";
 import deepCleaningImg from "../assets/deep-cleaning .jpg";
 import geminiAboutImg from "../assets/Gemini_Generated_Image_iot119iot119iot1 (1).png";
 import geminiResidentialImg from "../assets/Gemini_Generated_Image_houixjhouixjhoui (1).png";
 import whyUsImg from "../assets/why-us.jpg";
 import commercialCleaningImg from "../assets/commercial_cleaning_services.jpg";
-import familyDayImg from "../assets/🏡✨ Sunday is Family Day! ✨🏡_Nothing feels better than spending quality time with loved ones in a fresh, clean, and clutter-free home! 💖 Enjoy a relaxing Sunday without worrying about the mess—Gold Star Maids has.jpg";
+import familyDayImg from "../assets/team22.jpg";
 
 const WaveDivider = () => (
   <div className="wave-divider">
@@ -246,7 +245,7 @@ export default function Home() {
             </motion.a>
 
             <motion.a
-              href="https://www.instagram.com/"
+              href="https://www.instagram.com/kingdomcleen?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
               target="_blank"
               rel="noopener noreferrer"
               className="contact-card"
@@ -260,6 +259,24 @@ export default function Home() {
               </div>
               <div className="contact-content">
                 <h3>Instagram</h3>
+                <p>Suivez-nous</p>
+              </div>
+            </motion.a>
+            <motion.a
+              href="https://www.linkedin.com/in/kingdom-cleen-907b213a9/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="contact-card"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              viewport={{ once: true }}
+            >
+              <div className="contact-icon">
+                <Linkedin size={32} />
+              </div>
+              <div className="contact-content">
+                <h3>LinkedIn</h3>
                 <p>Suivez-nous</p>
               </div>
             </motion.a>
@@ -315,9 +332,16 @@ export default function Home() {
           </div>
           <div className="faq-grid">
             {/* Image on the left */}
-            <div className="faq-image">
+            <motion.div 
+              className="faq-image"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+            >
               <img src={familyDayImg} alt="Family Day Clean Home" />
-            </div>
+            </motion.div>
             
             {/* Questions on the right */}
             <div className="faq-section">
